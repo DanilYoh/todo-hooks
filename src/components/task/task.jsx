@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import PropTypes from 'prop-types';
 import './task.css';
+// import { de } from 'date-fns/locale';
 
 const Task = ({ text, isActive, id, created, onChangeStatus, onDeleteTask, currentFilter, isEditing, onToggleEditInput, timerValue, onEditTask }) => {
 
@@ -107,3 +108,5 @@ Task.propTypes = {
   onToggleEditInput: PropTypes.func,
   timerValue: PropTypes.arrayOf(PropTypes.number),
 };
+
+export default Task;

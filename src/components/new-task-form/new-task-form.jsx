@@ -4,6 +4,8 @@ import './new-task-form.css';
 
 const NewTaskForm = ({ onCreateTask }) => {
   
+  
+
   const [inputValue, setInputValue] = useState('');
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
@@ -30,7 +32,7 @@ const NewTaskForm = ({ onCreateTask }) => {
   
 
     return (
-      <form className="new-todo-form" onSubmit={handleSubmitForm}>
+      <form className = "new-todo-form" onSubmit = {handleSubmitForm}>
         <input
           className="new-todo"
           placeholder="What needs to be done?"
@@ -41,6 +43,7 @@ const NewTaskForm = ({ onCreateTask }) => {
         <input
           className="new-todo-form__timer"
           value={minutes}
+          type="number"
           onChange={handleInputMinutes}
           required
           placeholder="Min"
@@ -48,6 +51,7 @@ const NewTaskForm = ({ onCreateTask }) => {
         <input
           className="new-todo-form__timer"
           value={seconds}
+          type="number"
           onChange={handleInputSeconds}
           required
           placeholder="Sec"
